@@ -14,13 +14,13 @@ pipeline {
         TOMCAT_DEPLOY_PATH = "'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0"  // Ensure the correct path format
     }
     stages {
-        stage('Git Checkout') {
-            steps {
-                echo "Cehckout branch ${BRANCH_NAME}"
-                git scm
-                echo "Checkout Completed"
-            }
-        }
+        // stage('Git Checkout') {
+        //     steps {
+        //         echo "Cehckout branch ${BRANCH_NAME}"
+        //         git scm
+        //         echo "Checkout Completed"
+        //     }
+        // }
         
         stage('Test') {
             steps {
