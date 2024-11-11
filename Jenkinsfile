@@ -35,13 +35,18 @@ pipeline {
         }
 
         stage('Deploy to Tomcat') {
-            steps {
-                script {
-                    bat "copy 'target\\*.war' "${TOMCAT_DEPLOY_PATH}"\\webapps\\'"
-                }
-                
-            }
+    steps {
+        script {
+            // Debugging step to print the paths
+            echo "Target WAR Path: target\\*.war"
+            echo "Tomcat Deployment Path: ${TOMCAT_DEPLOY_PATH}\\webapps\\"
+
+            // Proceed with the deployment
+            bat "copy \"target\\*.war\" \"${TOMCAT_DEPLOY_PATH}\\webapps\\\""
         }
+    }
+}
+
 
     }
 }
