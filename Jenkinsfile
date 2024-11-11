@@ -13,7 +13,6 @@ pipeline {
         TOMCAT_PASSWORD = "Moh123\$\$"  // Use Jenkins credentials for sensitive info
         TOMCAT_DEPLOY_PATH = "'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0"  // Ensure the correct path format
     }
-
     stages {
         stage('Git Checkout') {
             steps {
