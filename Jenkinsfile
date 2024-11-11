@@ -40,7 +40,7 @@ pipeline {
             // Debugging step to print the paths
             echo "Target WAR Path: target\\*.war"
             echo "Tomcat Deployment Path: ${TOMCAT_DEPLOY_PATH}\\webapps\\"
-
+            bat "ls \"target"
             // Proceed with the deployment
             bat "copy \"target\\*.war\" \"${TOMCAT_DEPLOY_PATH}\\webapps\\\""
         }
