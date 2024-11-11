@@ -16,7 +16,9 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
+                echo "Cehckout branch ${BRANCH_NAME}"
                 git scm
+                echo "Checkout Completed"
             }
         }
         
