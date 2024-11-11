@@ -40,9 +40,8 @@ pipeline {
             // Debugging step to print the paths
             echo "Target WAR Path: target\\*.war"
             echo "Tomcat Deployment Path: ${TOMCAT_DEPLOY_PATH}\\webapps\\"
-            ls
             // Proceed with the deployment
-            bat "copy \"target\\*.war\" \"${TOMCAT_DEPLOY_PATH}\\webapps\\\""
+            bat "copy C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Demo \"${TOMCAT_DEPLOY_PATH}\\webapps\\\""
         }
     }
 }
