@@ -36,7 +36,7 @@ pipeline {
         stage('Deploy to Tomcat') {
             steps {
                 script {
-                    bat 'copy "target\\*.war" "%CATALINA_HOME%\\webapps\\"'
+                    bat 'copy "target\\*.war" "TOMCAT_DEPLOY_PATH\\webapps\\"'
                 }
                 
             }
