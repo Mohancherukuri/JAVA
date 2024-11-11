@@ -11,7 +11,7 @@ pipeline {
         TOMCAT_SERVER = "http://192.168.0.113:8080"
         TOMCAT_USER = "admin"
         TOMCAT_PASSWORD = "Moh123\$\$"  // Use Jenkins credentials for sensitive info
-        TOMCAT_DEPLOY_PATH = "C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps\\"  // Ensure the correct path format
+        TOMCAT_DEPLOY_PATH = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0'
     }
     stages {
         // stage('Git Checkout') {
@@ -41,7 +41,7 @@ pipeline {
             echo "Target WAR Path: target\\*.war"
             echo "Tomcat Deployment Path: ${TOMCAT_DEPLOY_PATH}\\webapps\\"
             // Proceed with the deployment
-            bat "copy /Y C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Demo\\target\\*.war ${TOMCAT_DEPLOY_PATH}"
+           bat 'copy "target\\*.war" "%TOMCAT_DEPLOY_PATH%\\webapps\\"'
         }
     }
 }
