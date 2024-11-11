@@ -41,7 +41,7 @@ pipeline {
             echo "Target WAR Path: target\\*.war"
             echo "Tomcat Deployment Path: ${TOMCAT_DEPLOY_PATH}\\webapps\\"
             // Proceed with the deployment
-            bat "copy C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Demo\\*.war \"${TOMCAT_DEPLOY_PATH}\\webapps\\\""
+            bat "copy C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Demo\\target\\*.war \"${TOMCAT_DEPLOY_PATH}\\webapps\\\""
         }
     }
 }
