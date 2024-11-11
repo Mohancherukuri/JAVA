@@ -24,15 +24,6 @@
     </form>
 
     <!-- Display feedback message from the servlet -->
-    <div id="message">
-      <!-- If there's a message, it will be displayed here -->
-      <p>
-        <!-- This part will be dynamically filled with the game feedback (e.g., too high, too low, or correct!) -->
-        <%= request.getAttribute("message") != null ?
-        request.getAttribute("message") : "" %>
-      </p>
-    </div>
-
     <br /><br />
     <p><a href="GuessGame">Try Again</a></p>
     <!-- Link to reset the game session -->
