@@ -58,7 +58,7 @@ public class GuessGameTest {
         // Secret number is 50, and user guesses 50 (correct guess)
         int secretNumber = 50;
         int guess = 50;
-        int attempts = 10;
+        int attempts = 20;
         
         // Call the method and get the result
         String result = guessGame.compareGuess(guess, secretNumber,attempts,session);
